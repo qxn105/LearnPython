@@ -1,4 +1,7 @@
-filename = 'pi_million_digits.txt'
+import os
+dir = os.path.dirname(__file__)
+filename = f'{dir}/pi_million_digits.txt'
+
 with open(filename) as file_object:
     lines = file_object.readlines()
 pi_string = ''

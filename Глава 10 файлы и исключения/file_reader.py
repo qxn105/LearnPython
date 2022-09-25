@@ -1,4 +1,6 @@
-filename = 'pi_digits.txt'
+import os
+dir = os.path.dirname(__file__)
+filename = f'{dir}/pi_digits.txt'
 
 # Чтение файла целиком
 # with open(filename) as file_object:
