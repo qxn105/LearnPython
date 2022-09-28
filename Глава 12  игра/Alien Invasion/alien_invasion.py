@@ -5,6 +5,7 @@ from settings import Settings
 from ship import Ship
 from bullet import Bullet
 
+
 class AlienInvasion:
     """Класс для управления ресурсами и поведением игры."""
 
