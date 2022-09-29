@@ -1,0 +1,8 @@
+{
+  "generated": 1664460639000,
+  "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_month.geojson",
+  "title": "USGS Magnitude 1.0+ Earthquakes, Past Month",
+  "status": 200,
+  "api": "1.10.3",
+  "count": 6539
+}
