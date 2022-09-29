@@ -5,7 +5,7 @@ from random_walk import RandomWalk
     
 # Новые блуждания строятся до тех пор, пока программа остается активной.
 plt.style.use('classic')
-fig, ax = plt.subplots(figsize=(15, 9), dpi=128)
+fig, ax = plt.subplots(figsize=(15, 8), dpi=100)
     
 # Построение случайного блуждания.
 rw = RandomWalk(50000)

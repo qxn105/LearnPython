@@ -18,7 +18,7 @@ with open(dir+'data/metadata.json', 'w') as f:
     json.dump(all_eq_data['metadata'], f, indent=2)
 all_eq_dicts = all_eq_data['features']
 
-all_eq_dicts = [i for i in all_eq_dicts if i[['properties']['mag']]>7]
+all_eq_dicts = filter(lambda d: d['properties']['mag']>6, all_eq_dicts)
 all_eq_dicts = sorted(all_eq_dicts, key=lambda d: d['properties']['mag'])
 
 with open(dir+'data/readable_eq_data.json', 'w') as f:
@@ -43,7 +43,7 @@ data = [{
     'lat': lats,
     'text':hover_texts,
     'marker': {
-        'size': [5*mag for mag in mags],
+        'size': [3*mag for mag in mags],
         'color': mags,
         'colorscale': 'Viridis',
         'reversescale': True,
