@@ -18,7 +18,7 @@ with open(dir+'data/metadata.json', 'w') as f:
     json.dump(all_eq_data['metadata'], f, indent=2)
 all_eq_dicts = all_eq_data['features']
 
-all_eq_dicts = filter(lambda d: d['properties']['mag']>6, all_eq_dicts)
+all_eq_dicts = filter(lambda d: d['properties']['mag']>4, all_eq_dicts)
 all_eq_dicts = sorted(all_eq_dicts, key=lambda d: d['properties']['mag'])
 
 with open(dir+'data/readable_eq_data.json', 'w') as f:
@@ -53,7 +53,7 @@ data = [{
 with open(dir+'data/data.json', 'w') as f:
     json.dump(data, f, indent=2)
 
-my_layout = Layout(title='Global Earthquakes')
+my_layout = Layout(title=f'{all_eq_data["metadata"]["title"]}')
 
 fig = {'data': data, 'layout': my_layout}
 offline.plot(fig, filename=dir+'global_earthquakes.html')
